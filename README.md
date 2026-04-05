@@ -73,45 +73,27 @@ Acasă
 
 ## Capturi de ecran
 
-### Pagina de copertă a raportului
-
-![Copertă](screenshots/page_1.png)
-
----
-
-### Panoul de control XAMPP — server pornit
-
-![XAMPP Control Panel](screenshots/page_15.png)
-
----
-
-### Pagina de test a serverului (`exemplu/index.html`)
-
-![Pagina exemplu](screenshots/page_18.png)
-
----
-
 ### Pagina principală — AutoPrim SRL (`index.html`)
 
-![Pagina principală](screenshots/page_45.png)
+![Pagina principală](page_45.png)
 
 ---
 
 ### Pagina "Despre noi" (`despre.html`)
 
-![Despre noi](screenshots/page_50.png)
+![Despre noi](page_50.png)
 
 ---
 
 ### Pagina "Mașini Noi" (`masini_noi.html`)
 
-![Mașini Noi](screenshots/page_61.png)
+![Mașini Noi](page_61.png)
 
 ---
 
 ### Pagina "Filialele noastre" (`filiale.html`)
 
-![Filiale](screenshots/page_81.png)
+![Filiale](page_81.png)
 
 ---
 
