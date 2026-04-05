@@ -1,69 +1,69 @@
-# Lucrare de Laborator Nr.1 — Tehnologii Web
+# Laboratory Work No.1 — Web Technologies
 
-**Student:** Ciobanu Stanislav, gr. CR-221fr  
-**Conducător:** lect.univ. Rusu Viorel  
-**Instituție:** UTM — Facultatea Calculatoare, Informatică și Microelectronică  
-**An:** 2024
-
----
-
-## Tema
-
-> **Conceperea unei aplicații Web. Crearea conținutului Web utilizând HTML și CSS**
+**Student:** Ciobanu Stanislav, group CR-221fr  
+**Supervisor:** Lect. Univ. Rusu Viorel  
+**Institution:** Technical University of Moldova — Faculty of Computers, Informatics and Microelectronics  
+**Year:** 2024
 
 ---
 
-## Descriere
+## Assignment
 
-Lucrarea are două părți principale:
-
-1. **Instalarea unui server web local** — compararea pachetelor (XAMPP, WAMP, EasyPHP, AMPPS, AppServ), alegerea și instalarea **XAMPP**, configurarea virtual host-urilor, testarea cu pagini HTML/CSS simple.
-
-2. **Dezvoltarea unui site static** — site-ul salonului auto fictiv **AutoPrim SRL** cu 5 pagini HTML interconectate, un fișier CSS comun, meniuri derulante, blocuri dinamice, tabele și formulare.
+> **Designing a Web Application. Creating Web Content using HTML and CSS**
 
 ---
 
-## Structura proiectului
+## Description
+
+The project consists of two main parts:
+
+1. **Local web server setup** — comparison of packages (XAMPP, WAMP, EasyPHP, AMPPS, AppServ), selection and installation of **XAMPP**, configuration of virtual hosts, testing with simple HTML/CSS pages.
+
+2. **Static website development** — a fictional car dealership website **AutoPrim SRL** with 5 interconnected HTML pages, a shared CSS file, dropdown menus, dynamic blocks, tables, and forms.
+
+---
+
+## Project Structure
 
 ```
 autoprim/
-├── style.css                  # Fișier CSS comun pentru toate paginile
-├── index.html                 # Pagina principală
-├── despre.html                # Pagina "Despre noi"
-├── masini_noi.html            # Pagina "Asortiment → Mașini noi"
-├── masini_second_hand.html    # Pagina "Asortiment → Mașini second-hand"
-├── filiale.html               # Pagina "Filiale"
-└── contacte.html              # Pagina "Contacte"
+├── style.css # Shared CSS file for all pages
+├── index.html # Homepage
+├── despre.html # "About Us" page
+├── masini_noi.html # "Assortment → New Cars" page
+├── masini_second_hand.html # "Assortment → Used Cars" page
+├── filiale.html # "Branches" page
+└── contacte.html # "Contacts" page
 
 exemplu/
-├── index.html                 # Pagina de test a serverului web
-└── style.css                  # Stilul paginii de test
+├── index.html # Web server test page
+└── style.css # Test page styles
 ```
 
 ---
 
-## Modelul funcțional al site-ului
+## Website Functional Model
 
 ```
-Acasă
-├── Acasă
-├── Despre noi
-├── Asortiment
-│   ├── Mașini noi
-│   └── Mașini second-hand
-├── Filiale
-└── Contacte
+Home
+├── Home
+├── About Us
+├── Assortment
+│ ├── New Cars
+│ └── Used Cars
+├── Branches
+└── Contacts
 ```
 
 ---
 
-## Tehnologii utilizate
+## Technologies Used
 
-| Tehnologie | Versiune / Detalii |
+| Technology | Version / Details |
 |---|---|
 | HTML | HTML5 |
-| CSS | CSS3 + SVG (validat W3C) |
-| Server web | Apache (via XAMPP 8.2.12) |
+| CSS | CSS3 + SVG (W3C validated) |
+| Web Server | Apache (via XAMPP 8.2.12) |
 | Browser | Microsoft Edge |
 | Editor | Notepad |
 | Image hosting | imgbb.com (CDN) |
@@ -71,65 +71,65 @@ Acasă
 
 ---
 
-## Capturi de ecran
+## Screenshots
 
-### Pagina principală — AutoPrim SRL (`index.html`)
+### Homepage — AutoPrim SRL (`index.html`)
 
-![Pagina principală](page_45.png)
-
----
-
-### Pagina "Despre noi" (`despre.html`)
-
-![Despre noi](page_50.png)
+![Homepage](page_45.png)
 
 ---
 
-### Pagina "Mașini Noi" (`masini_noi.html`)
+### "About Us" Page (`despre.html`)
 
-![Mașini Noi](page_61.png)
-
----
-
-### Pagina "Filialele noastre" (`filiale.html`)
-
-![Filiale](page_81.png)
+![About Us](page_50.png)
 
 ---
 
-## Caracteristici HTML/CSS demonstrate
+### "New Cars" Page (`masini_noi.html`)
 
-- Structura HTML5 semantică: `<header>`, `<nav>`, `<footer>`, `<section>`
-- Meniu de navigare cu **submeniu derulant** (CSS `:hover`)
-- **Tabele** cu `border`, `colspan`, `rowspan`, `caption`, `bgcolor`
-- **Formulare** cu `input[type="email|tel|date|color|submit"]`
-- **Canvas HTML5** cu JavaScript (desene, text, umbre, gradient)
-- **Audio HTML5** cu atributele `autoplay` și `loop`
-- **Liste** ordonate și neordonate (`<ol type="A">`, `<ul type="circle">`)
-- Formatare text: `<b>`, `<i>`, `<u>`, `<em>`, `<strong>`, `<cite>`, `<code>`, `<pre>`, `<sup>`
-- Entități HTML: `&copy;`, `&nbsp;`, `&lt;`, `&gt;`, `&amp;`
-- Ancore interne (`<a name="...">`) și link-uri externe
-- CSS extern cu selectori simpli, multipli, descendenți, de atribut și pseudo-clase
-- Clase CSS pentru blocuri dinamice cu înălțime fixă
-- Imagini externe prin CDN (imgbb.com)
-- Hărți Google Maps embed (`<iframe>`)
-- Validat cu **W3C CSS Validator** (CSS3 + SVG — fără erori)
-- Validat cu **W3C Markup Validation Service** (HTML5 — fără erori)
+![New Cars](page_61.png)
 
 ---
 
-## Rulare locală
+### "Our Branches" Page (`filiale.html`)
 
-1. Instalați [XAMPP](https://www.apachefriends.org/) și porniți modulul **Apache**.
-2. Copiați folderul `autoprim/` în `C:\xampp\htdocs\`.
-3. Accesați în browser: `http://localhost/autoprim/`
+![Branches](page_81.png)
 
 ---
 
-## Concluzie
+## HTML/CSS Features Demonstrated
 
-Lucrarea a permis acumularea de experiență practică cu instalarea unui server web local (XAMPP), crearea și validarea paginilor HTML5/CSS3, utilizarea virtual host-urilor Apache și implementarea unui site static multi-pagină cu navigare funcțională.
+- Semantic HTML5 structure: `<header>`, `<nav>`, `<footer>`, `<section>`
+- Navigation menu with **dropdown submenu** (CSS `:hover`)
+- **Tables** using `border`, `colspan`, `rowspan`, `caption`, `bgcolor`
+- **Forms** with `input[type="email|tel|date|color|submit"]`
+- **HTML5 Canvas** with JavaScript (drawing, text, shadows, gradients)
+- **HTML5 Audio** with `autoplay` and `loop` attributes
+- **Lists** ordered and unordered (`<ol type="A">`, `<ul type="circle">`)
+- Text formatting: `<b>`, `<i>`, `<u>`, `<em>`, `<strong>`, `<cite>`, `<code>`, `<pre>`, `<sup>`
+- HTML entities: `&copy;`, `&nbsp;`, `&lt;`, `&gt;`, `&amp;`
+- Internal anchors (`<a name="...">`) and external links
+- External CSS with simple, multiple, descendant, attribute selectors and pseudo-classes
+- CSS classes for dynamic blocks with fixed height
+- External images via CDN (imgbb.com)
+- Embedded Google Maps (`<iframe>`)
+- Validated with **W3C CSS Validator** (CSS3 + SVG — no errors)
+- Validated with **W3C Markup Validation Service** (HTML5 — no errors)
 
 ---
 
-*© 2024 Ciobanu Stanislav. Toate drepturile rezervate.*
+## Local Setup
+
+1. Install [XAMPP](https://www.apachefriends.org/) and start the **Apache** module.  
+2. Copy the `autoprim/` folder into `C:\xampp\htdocs\`.  
+3. Open in browser: `http://localhost/autoprim/`
+
+---
+
+## Conclusion
+
+This project provided practical experience with setting up a local web server (XAMPP), creating and validating HTML5/CSS3 pages, configuring Apache virtual hosts, and implementing a multi-page static website with functional navigation.
+
+---
+
+*© 2024 Ciobanu Stanislav. All rights reserved.*
