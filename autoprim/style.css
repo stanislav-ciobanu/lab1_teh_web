@@ -1,0 +1,246 @@
+﻿/* Fișierul CSS extern pentru toate paginile HTML a site-ului */
+
+/*
+    Stabilim stilul pentru secțiunea corpului,
+    avem tag-ul HTML body ca selector simplu
+*/
+body {
+    /* Browser-ul utilizează primul font generic disponibil din listă */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stilul secțiunii de antet (cu titlu) specifice HTML5 */
+header {
+    background-color: #333;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Stilul secțiunii de navigare specifice HTML5 ce conține meniul */
+nav {
+    background-color: #555;
+    padding: 10px;
+}
+
+/*
+    Stilul listei neordonate din cadrul meniului derulant. Selectorul
+    descendent selectează un tag cu un anumit ascendent (strămoș)
+*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Stilul elementelor listei neordonate din cadrul meniului derulant */
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+/* Stilul link-urilor elementelor listei din cadrul meniului derulant */
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* Stilul meniului derulant propriu-zis */
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    width: 170px;
+    text-align: left;
+}
+
+/*
+    Stilul pseudo-clasei în momentul când mouse-ul e
+    deasupra unui element al meniului derulant
+*/
+nav ul li:hover .sub-menu {
+    display: block;
+}
+
+/*
+    Stilul container-ului utilizat pentru a încadra și organiza
+    conținutul cu lățimea limitată, centrat în mijlocul paginii
+*/
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/*
+      Atributul class permite definirea de stiluri multiple pentru același element.
+      Clasa stilului unui bloc dinamic de informații. Pentru definirea unui selector
+      care să se aplice tuturor elementelor din acea clasă, se elimină numele elementului
+      (dar păstrăm punctul)
+*/
+.block {
+    height: 965px;
+    /* Culoarea fundalului textului în HEX */
+    background-color: #F4F4F4;
+    padding: 20px;
+    /* Valoare specificată în pixeli */
+    margin-bottom: 20px;
+}
+
+/* Clasa blocului cu contacte de pe pagina respectivă */
+.contact-block {
+    height: 1125px;
+    background-color: #F4F4F4;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Clasa blocului unei sucursale de pe pagina respectivă */
+.sucurs-block {
+    height: 650px;
+    background-color: #F4F4F4;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Clasa blocului cu mesaj de pe pagina principală */
+.msg-block {
+    height: 550px;
+    background-color: #F4F4F4;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/*
+    Selecteză tag-ul img dacă acestă se
+    află undeva în interiorul unui bloc
+*/
+.block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Clasa imaginii blocului cu mesaj de pe pagina principală */
+.msg-block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Stabilim stilul formularului (de pe pagina de contact) */
+form {
+    background-color: #EAEAEA;
+    padding: 20px;
+    margin-top: 20px;
+    /* Stabilim unghiuri rotunde */
+    border-radius: 5px;
+}
+
+/*
+    Stilul câmpurilor de introducere din cadrul formularului
+    Am utilizat selectori multipli, adică proprietățile se v-or
+    aplica asupra tuturor tag-urilor specificate. Selectorii simpli
+    de atribut permit selectarea elementelor care au anumite valori ale
+    atributelor
+*/
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+    width: 45%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+/* Stabilim lațimea un pic mai mare pentru câmpul mesajului */
+form textarea {
+    width: 75%; /* Valoare procentuală */
+}
+
+/* Stilul butonului de confirmare a formularului */
+form input[type="submit"] {
+    background-color: #333;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Stilul secțiunii de subsol specifice HTML5 */
+footer {
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Ancora de reîntoarcere la începutul paginii din subsol */
+footer a {
+    color: red; /* culoare specificată prin cuvânt */
+}
+
+/* Alinierea la centru a textului paragrafului subsolului */
+footer p {
+    text-align: center;
+}
+
+/*
+    Alinierea la centru a conținutului
+    celulelor de date a tabelelor
+*/
+td {
+    text-align: center;
+}
+
+/*
+    Alinierea la centru a conținutului
+    celulelor de antet a tabelelor
+*/
+th {
+    text-align: center;
+}
+
+/*
+    Culoarea de fundal pentru celulele cu
+    zile a tabelului orarului de lucru
+*/
+.orar th {
+    background-color: khaki;
+}
+
+/*
+    Am stabilit spații (câmpuri) între imaginea
+    colectivului și textul din împrejur
+*/
+.group-image {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+/* 
+    Am mărit text-ul titlului caption a
+    tabelului programului de lucru
+*/
+.sucurs-block table caption {
+    font-size: 18pt;
+}
+
+/* Am utilizat punct și virgulă, deși nu este obligatoriu */

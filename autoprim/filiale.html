@@ -1,0 +1,207 @@
+﻿<!-- Standard-ul HTML5 -->
+<!DOCTYPE html>
+
+    <!-- Secțiunea de deschidere document HTML, am setat limba română -->
+    <html lang="ro">
+
+    <!-- Secțiunea headerului documentului HTML (cu metainformații SEO) -->
+    <head>
+	<!-- Stabilim Unicode pentru diacritice -->
+	<meta charset="utf-8">
+	<!-- Responsive pe dispozitivele mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<!-- Informații (nume) despre autor -->
+    	<meta name="author" content="Ciobanu Stanislav">
+    	<!-- Cuvinte cheie despre conținut -->
+    	<meta name="keywords" content="auto, salon auto, mașină, automobil, filiale">
+    	<!-- Descrierea conținutului -->
+    	<meta name="description" content="Pagina cu filiale a site-ului salonului auto AutoPrim SRL">
+    	<!-- Facem legătura cu style sheet-ul extern CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    	<!-- Stabilirea titlului documentului -->
+    	<title>Filiale</title>
+    </head>
+
+    <!-- Corpul paginii contactelor -->
+    <body>
+	<!-- Secțiunea de antet specifică HTML5 ce conține titlu -->
+        <header>
+            <a name="ancora_inceput"></a>
+	    <!-- Nivelul 1 de antet (cel mai important) -->
+            <h1>Filialele noastre</h1>
+        </header>
+
+	<!-- Secțiunea de navigare specifică HTML5 ce conține meniu-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="despre.html">Despre noi</a></li>
+                <!-- Cream un meniu derulant utilizând clasa CSS sub-menu -->
+                <li>
+                    <a href="#">Asortiment</a>
+                    <ul class="sub-menu">
+                        <li><a href="masini_noi.html">Mașini noi</a></li><br>
+                        <li><a href="masini_second_hand.html">Mașini second-hand</a></li>
+                    </ul>
+                </li>
+    	        <li><a href="filiale.html">Filiale</a></li>
+                <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+
+	<!-- Aplicăm tag-ul div descris în cadrul stilului CSS ce este tratat similar cu un paragraf -->
+        <div class="container">
+	    <!-- Aplicăm atributului class de tip block descris în cadrul stilului CSS -->
+            <div class="sucurs-block">
+
+		<!-- Stabilim nivelul 2 de antet (mai puțin important) blocului de contacte -->
+                <h2>Sucursala Centru:</h2><br>
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<b>Amplasarea noastră:</b></p><br>
+
+		<!-- Inserăm amplasarea de pe Google Maps -->
+		<iframe
+		    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2923.124338620781!2d28.84734847483202!3d47.03030456920648!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97da7fd32c8af%3A0x50e4df2e3a28784c!2sInterauto!5e0!3m2!1sru!2s!4v1711043558955!5m2!1sru!2s"
+		    align="right" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+		</iframe>
+
+		<!-- Definim un tabel cu programul (orarul) de lucru -->
+                <table class="orar" border="2" align="left" width="45%" cellpadding="2" bordercolor="gray" bgcolor="f2f2f2">
+		    <caption><strong>Program de lucru:</strong></caption>
+  		    <tr>
+			<th>Luni</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Marți</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Miercuri</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Joi</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Vineri</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Sâmbătă</th>
+                        <td>9<sup>00</sup> - 13<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Duminică</th>
+                        <td>Zi liberă</td>
+                    </tr>
+                </table>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<!-- Textul descriptiv al sucursalei (observăm că spațiile albe au fost ignorate) -->
+                <h3>Descriere:</h3>
+		<p align="justify">
+		    <!-- Am utilizat entitatea nbsp pentru a plasa spațiile albe a idententării paragrafului -->
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aceasta este prima și la moment cea mai mare filială a noastră ce deține un parc de <i>150-200 automobile</i>
+		    dintr-un interval de prețuri <i>3000-15000 €</i>. Aceasta filială se bazează mai mult pe sectorul bugetar și second-hand, prezentat de mărcile
+		    <i>Dacia</i>, <i>Opel</i>, <i>Citroen</i>, <i>Seat</i> și <i>Nissan</i>. Transport public ce circulă în regiunea dată este reprezentat de
+		    autobuzele nr.19 și nr.37, precum și de trolebuzul nr.38.
+                </p>
+            </div>
+
+            <div class="sucurs-block">
+
+		<!-- Stabilim nivelul 2 de antet (mai puțin important) blocului de contacte -->
+                <h2>Sucursala Botanica:</h2><br>
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<b>Amplasarea noastră:</b></p><br>
+
+		<!-- Inserăm amplasarea de pe Google Maps -->
+		<iframe
+		    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.3824951763686!2d28.874941200000002!3d46.9738214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c9793fdb47d23b%3A0x52d6e5519ea0b358!2sInterauto!5e0!3m2!1sru!2s!4v1711044135589!5m2!1sru!2s"
+                    align="right" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+		</iframe>
+
+		<!-- Definim un tabel cu programul (orarul) de lucru -->
+                <table class="orar" border="2" align="left" width="45%" cellpadding="2" bordercolor="gray" bgcolor="f2f2f2">
+		    <caption><strong>Program de lucru:</strong></caption>
+  		    <tr>
+			<th>Luni</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Marți</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Miercuri</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Joi</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Vineri</th>
+                        <td>9<sup>00</sup> - 18<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Sâmbătă</th>
+                        <td>9<sup>00</sup> - 13<sup>00</sup></td>
+                    </tr>
+  		    <tr>
+			<th>Duminică</th>
+                        <td>Zi liberă</td>
+                    </tr>
+                </table>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<!-- Textul descriptiv al sucursalei (observăm că spațiile albe au fost ignorate) -->
+                <h3>Descriere:</h3>
+		<p align="justify">
+		    <!-- Am utilizat entitatea nbsp pentru a plasa spațiile albe a idententării paragrafului -->
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aceasta la moment este cea mai nouă filială a noastră ce deține un parc de <i>50-100 automobile</i>
+		    dintr-un interval de prețuri <i>15000-80000 €</i>. Aceasta filială se bazează mai mult pe sectorul sport și lux, prezentat de mărcile
+		    <i>Porsche</i>, <i>Audi</i>, <i>Lexus</i>, <i>Mercedes</i> și <i>BMW</i>. Transport public ce circulă în regiunea dată este reprezentat
+		    de trolebuzul nr.22, precum și de rutiera nr.120. Aceasta este alegerea cea mai bună dacă dorești un automobil elitar.
+                </p>
+            </div>
+
+            <!--
+		Definim subsolul în secțiunea footer specifică HTML5
+                ce conține informații despre autor și copyright
+            -->
+            <footer>
+		<!-- Am utilizat entitatea pentru simbolul special copyright -->
+                <p>&copy; 2024 Ciobanu Stanislav. Toate drepturile rezervate.</p>
+    		<!--
+       	 	    Pentru a demonstra vizitatorilor paginii că pentru noi corectitudinea codului
+                    importă am plasat insigna obținută în urma trecerii CSS Validator
+                -->
+                <p>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img style="border:0;width:88px;height:31px"
+                            src="http://jigsaw.w3.org/css-validator/images/vcss"
+                            alt="CSS corect!" />
+                    </a>
+                </p>
+                <!-- Link către zona ancorei de început -->
+                <a href="#ancora_inceput">Întoarcere spre începutul paginii</a>
+            </footer>
+
+        </div>
+    </body>
+</html>

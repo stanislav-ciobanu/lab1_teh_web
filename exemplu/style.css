@@ -1,0 +1,237 @@
+﻿/*
+  Cascading Style Sheet (CSS) descrie și controlează, prin introducerea de
+  tag-uri, modul de reprezentare (afișare) și layout-ul tuturor paginilor
+  HTML de pe server (într-un singur loc - un fișier separat de obicei sub
+  denumirea style.css).
+  
+  Din cele trei moduri de utilizare a CSS-urilor - style sheet extern,
+  intern și inline am decis să utilizez Style sheet extern deoarece acesta
+  este cel mai puternic, se aplică atât la HTML/XML și spre diferență de cel
+  intern sau inline, toate elementele de sintaxa CSS pot fi utilizate.
+  
+  În cadrul celor inline ce se definesc în cadrul atributului STYLE care
+  poate fi adăugat la orice element HTML și are avantajul că este util atunci
+  când dorim să facem mici schimbări ale stilului. Dezavantajele sunt că are
+  loc o mixare a informațiilor de afișare cu cele de HTML, respectiv se
+  îngreunează citirea codului HTML.
+  
+  Sintaxa fișierelor CSS este foarte simplă deoarece constă dintr-o listă de
+  perechi de selectori (pentru alegerea tag-urilor) și descriptori (pentru a
+  indica ce vrem să facem cu acestea). Selectorii pot fi simple tag-uri HTML
+  sau XML, dar se pot defini și moduri de combinare a tag-urilor. Descriptorii
+  sunt definiți în standard-ul CSS.
+*/
+
+/*
+  În cadrul unui document HTML stilurile se aplică în următoarea ordine de
+  cascadare: stilurile implicite ale browser-ului, apoi Style sheet-urile
+  externe. Atunci când apar conflicte, "cel mai recent" (extern) primează.
+*/
+
+/*
+  Selectorul universal * se aplică asupra tuturor elementelor, însă când
+  valorile se suprapun, selectorul specific primează înaintea celui general
+*/
+
+* {
+  color: maroon;
+}
+
+/* Avem un tag HTML ca selector simplu */
+p {
+  /* Această proprietate poate primi valorile none, overline sau line-through */
+  text-decoration: underline;
+  /* Această proprietate poate primi valorile none, capitalize sau uppercase */
+  text-transform: lowercase;
+  /* Indentăm prima linie dintr-un text, poate fi length sau o valoare procentuală */
+  text-indent: 10%;
+  /* Această proprietate poate primi valorile inherit (moștenit) small, medium sau large */
+  font-size: 12pt;
+}
+
+/*
+  Putem utiliza și selectori multipli, adică proprietățile
+  se v-or aplica asupra tuturor tag-urilor specificate
+*/
+
+h1,h2,h3 {
+  /* Browser-ul utilizează primul font generic disponibil din listă */
+  font-family: Arial, sans-serif;
+}
+
+/*
+  Dacă repetăm selectorii, când se suprapun proprietățile se
+  utilizează ultima valoare definită (suprascrierea stilurilor)
+*/
+
+h1,h3 {
+  /* Utilizează primul font disponibil din listă */
+  font-family: Verdana, serif;
+  /* Această proprietate pentru font-uri poate primi valorile normal, oblique */
+  font-style: italic;
+  /* Specificarea alinierii textului ce poate fi left, right sau justify */
+  text-align: center;
+}
+
+/*
+  Selectorul descendent selectează un tag cu un anumit ascendent (strămoș),
+  adică în cazul dat selecteză tag-ul code dacă acesta se află undeva în
+  interiorul unui paragraf
+*/
+
+p code {
+  color: brown;
+  /* Moștenim font-ul de la părinte */
+  font-family: inherit;
+}
+
+/*
+  Selectorul copil > selecteză un tag dacă are un anumit părinte, adică în cazul
+  dat selecteză tag-ul em numai dacă parintele lui imediat este tag-ul p
+*/
+
+p > em {
+  /*
+    Această proprietate pentru font-uri poate primi valorile
+    normal, bolder, lighter sau o valoare numerică
+  */
+  font-weight: bold
+}
+
+/*
+  Selectorul adiacent selecteză un element dacă se află imediat după un altul
+*/
+
+b + i {
+  font-size: 8pt
+}
+
+/*
+  Specificarea culorilor are loc cu proprietățile color și background-color ce pot
+  primi următoarele valori de tip text (denumirea culorii în engleză) precum black,
+  green... sau codul hexazecimal (HEX) de formă #FF0000 sau #F00. La fel există
+  codul RGB rgb(255, 0, 0) dar este un nume specific browser-ului (nerecomandat).
+*/
+
+b {
+  /* Culoarea text-ului propriu-zis */
+  color: yellow;
+  /* Culoarea fundalului textului */
+  background-color: #FF0000;
+  /*
+    Valorile lungimilor se specifică prin diferite unități de masură, precum în (inchi),
+    cm (centimetri), mm (milimetri), pt (puncte), pc (1 picas = 12 puncte), em, ex,
+    px (pixels) sau procent din dimensiunea moștenita.
+  */
+  font-size: 24px;
+}
+
+/*
+  Un selector simplu de atribut permite selectarea elementelor care au anumite
+  atribute, indiferent de valoarea acestora având sintaxa element[atribut] {...}
+  de exemplu table[border] {...}.
+*/
+
+a[name] {
+  color: red;
+}
+
+/*
+  Un selector de atribut cu valoare permite selectarea elementelor ce au un atribut
+  cu o valoare dată element[atribut="valoare"] de exemplu table[border="1"]
+*/
+
+table[border="1"] {
+  color: aqua;
+}
+
+/*
+  Frecvent proprietățile multiple de anumită formă pot fi rescrise comod
+  (proces denumit prescurtarea proprietăților).
+  
+  De exemplu, din:
+  
+  h6 {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 12pt;
+    line-height: 14pt;
+    font-family: sans-serif
+  }
+  
+  Am obținut:
+*/
+
+h6 {
+  font: bold small-caps 12pt/14pt sans-serif
+}
+
+/*
+  Atributul class permite definirea de stiluri multiple pentru același element,
+  definim text important (important class) și text pentru listare (fineprint).
+  Observăm că am utilizat punct și virgulă la sfârșit ocazițional deoarece
+  sunt opționale
+*/
+
+p.important {
+  font-size: 24pt;
+  color: red
+}
+
+p.fineprint {
+  font-size: 8pt
+}
+
+/*
+  Pentru definirea unui selector care să se aplice tuturor elementelor din acea
+  clasă, se elimină numele elementului (dar păstrăm punctul)
+*/
+
+.fineprint {
+  font-size: 12pt
+}
+
+/* Descriem stilul tag-urilor div și span */
+
+div {
+  background-color: #66FFFF
+}
+
+span.color {
+  color: red
+}
+
+/* Setăm stilul pentru elementele listelor ordonate/neordonate */
+li {
+  /* Cuprindem între " " valorile cu spații */
+  font-family: "Courier New";
+  /* Specificăm indentarea */
+  margin-left: 15pt;
+}
+
+/* Descriem stilul celulelor headere al tabelelor */
+th {
+  /* Dimensiunea fontului este de 80% */
+  font-size: 80%;
+}
+
+/* Descriem stilul secțiunii corpului documentului */
+body {
+  background-color: cyan;
+  color: black;
+}
+
+/*
+  Pseudo-clasele sunt elemente a căror stare (și mod de afișare) se poate schimba
+  în timp având sintaxa element:pseudo-class {...}
+        :link - link care nu a fost viziat
+        :visited - link care a fost viziat
+        :active - link activ (pe care facem click)
+        :hover - link deasupra căruia e mouse-ul (dar nu a fost apăsat)
+  Pseudo-clasele sunt permise oriunde în selectori CSS.
+*/
+
+a:link {color:red}
+a:visited {color:fuchsia}
+a:active {color:maroon}
+a:hover {color:darkred}

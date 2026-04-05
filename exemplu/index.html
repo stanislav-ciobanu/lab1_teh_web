@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+
+<!--
+    Elementul-rădăcină de bază <html> marchează începutul codului HTML și
+    încadrează întregul conținut, iar atributul său lang stabilește limba
+    principală a conținutului paginii web (în cazul nostru - română).
+-->
+<html lang="ro">
+
+<!--
+    A doua secțiune a documentului HTML, cea declarativă de început (header
+    delimitată de tag-ul (elementul) de bază de tip bloc (pereche)
+    <head>...</head>. Secțiunea head cuprinde antetul paginii ce include
+    titlul cuprins între marcajele (tag-urile) <title>...</title> și
+    metainformații cu privire la conținutul paginii web în tag-ul <meta>
+    ce ajuta motoarele de căutare să înțeleagă mai bine conținutul paginilor,
+    subiectele lor, etc. - proces denumit optimizarea motorului de căutare
+    (SEO). Acestea nu sunt vizibile pentru om reprezentând o semantică pură.
+    La fel conține alte tag-uri precum <script>, <style> sau <link>.
+-->
+<head>
+    <!-- Pentru suportul afișării simbolurilor Unicode (diacriticelor) -->
+    <meta charset="utf-8">
+    
+    <!--
+        Specificăm Style sheet-urile (CSS) externe și observăm că "text/css"
+        este de tipul MIME. Apropo în HTML5 putem alege să specificăm sau nu
+        atributul type în elementele <script> deoarece acesta a devenit opțional.
+        Poate ar fi de dorit din motive de performanță să evităm dar totuși
+        pentru claritate am lăsat. Am indicat un URL local adică fișierul
+        style.css trebuie să se afle în același folder cu index.html
+    -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!-- Pentru ca site-ul să fie responsiv pe dispozitivele mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Informații (nume) despre autor -->
+    <meta name="author" content="Ciobanu Stanislav">
+    <!-- Cuvinte cheie despre conținut -->
+    <meta name="keywords" content="UTM, curs, TW, limbaj, web, html, css, exemplu">
+    <!-- Descrierea conținutului -->
+    <meta name="description" content="Exemplu de document HTML5">
+    <!-- Stabilirea titlului documentului -->
+    <title>Exemplu 1</title>
+</head>
+
+<!--
+    A treia secțiune a documentului HTML, un corp (body) care conține conținutul actual
+    efectiv (corpul) al documentului și este implementat cu elementul de bază <body> cu
+    atributele bgcolor (culoarea de fundal), text (culoarea textului), link (culoarea
+    pentru link-uri), vlink (culoarea pentru link-urile vizitate) și alink (culoarea
+    pentru link-urile active).
+-->
+<body bgcolor="cyan" text="black" link="red" alink="fuchsia" vlink="maroon">
+    <!--
+        Element pentru introducerea antetelor (titlurilor) utilizate pentru
+        ierarhizarea diferitelor secțiuni de text, cu atributul asociat align
+        ce specifică modul de aliniere a textului (în cazul dat la centru) de
+        nivelul 1 de antet (cel mai important) adică browser-ul îl v-a interpreta
+        cu font mai mare. Acest tip de marcaje este pentru structurarea
+        documentului deoarece permite introducerea de subtitluri.
+    -->
+    <h1 align="center">Heading 1</h1>
+    
+    <a name="ancora_inceput">Text-ul ancorei de început</a>
+    
+    <!--
+        Definirea de paragraf utilizând tag-ul <p>...</p> care v-a conține
+        trecerea la un rând nou ce se realizează utlizând tag-ul singular
+        <br>. Textul cuprins între tag-ul de început și cel de sfârșit se 
+        numește conținutul elementului. Acest tip de marcaje este pentru
+        structurarea documentului deoarece permite introducerea de paragrafe.
+    -->
+    <p>Exemplu de text (rândul 1)<br>Exemplu de text (rândul 2)</p>
+    
+    <!--
+        Introducerea unei linii orizontale se realizează cu ajutorul tag-ului
+        singular <hr>. Acest tip de marcaje este pentru structurarea documentului
+        deoarece permite introducerea de linii de delimitare.
+    -->
+    <hr>
+    
+    <!--
+        Antet cu atributul ce specifică modul de aliniere a textului
+        deja la dreapta de nivelul 2 de antet (mai puțin important)
+    -->
+    <h2 align="right">Heading 2</h2>
+    
+    <!--
+        Realizăm alinierea paragrafului la fel la dreapta utilizând atributul align
+    -->
+    <p align="right">Exemplu de text (paragraf)</p>
+    
+    <!--
+        Inserarea unei imagini utilizând marcajul pentru introducerea de obiecte
+        (imagini) <img>. Observăm că putem utiliza atât un URL local cât și extern
+    -->
+    <img src="https://images.wallpaperscraft.ru/image/single/kot_sneg_progulka_95616_240x320.jpg" width="240" height="320" alt="Imagine cu pisică" border="2">
+    
+    <!--
+        Antet cu atributul ce specifică modul de aliniere a textului
+        deja la stânga de nivelul 3 de antet (mai puțin important)
+    -->
+    <h3 align="left">Heading 3</h3>
+    
+    <!--
+        Afișăm un text preformatat cu ajutorul tag-ului <pre>. Majoritatea documentelor
+        HTML conțin text format cu tag-uri. Asta înseamnă că textul respectiv este afectat
+        de restricțiile HTML, în sensul că toate spațiile suplimentare, taburi, etc să fie
+        ignorate de către navigator. Prin intermediul acestui element putem afișa textul exact
+        așa cum el este.
+    -->
+    <p>Exemplu de cod Python (text preformatat)</p><br>
+    <pre>
+        def greet(nume):
+            print("Salut, " + nume + "!")
+
+        greet("Lume")
+    </pre>
+    
+    <!--
+        Utilizăm marcajul pentru introducerea de obiecte (formulare) <form>
+        ce are un șir de atribute noi (controale) pentru tag-ul câmpului de
+        introducere <input> adăugate în HTML5:
+            tel - valoare de tip număr de telefon
+            email - valoare de tip adresă de email
+            date - valoare de tip dată
+            time - valoare de tip timp
+            number - valoarea este un număr
+            color - valoarea este o culoare în HEX
+    -->
+    <p>Exemplu de formular:</p><br>
+    <form>
+        <!-- Am scris text-ul pur și simplu în HTMl ci nu în paragraf -->
+        Telefon:<input type="tel" /><br>
+        E-mail:<input type="email" /><br>
+        Dată:<input type="date" /><br>
+        Oră:<input type="time" /><br>
+        Număr:<input type="number" /><br>
+        Culoare:<input type="color" /><br>
+        <input type="submit" value="Confirmare" />
+    </form>
+    
+    <!--
+        Construim diferite grafice, diagrame și animații (desene grafice)
+        utilizând elementul nou din HTML <canvas> ce folosește limbajul 
+        JavaScript. Un canvas este reprezentat de o arie dreptunghiulară,
+        pe care e posibil de a controla fiecare pixel din el. V-om utiliza
+        instrumente de desenare precum dreptunghiuri, cercuri, curbe Bezier
+        și linii/trasee (paths). La fel, v-om aplica diferite efecte de umplere
+        sau de desenare a conturului (fills and strokes), umbre (shadows),
+        gradient liniar/radial și transparența. V-om aplica transformări precum
+        scalarea, rotația și translarea. Mai jos doar creăm elementul canvas cu
+        mesajul de avertizare în caz că browser-ul nu este compatibil cu acesta.
+    -->
+    <canvas id="myCanvas" width="200" height="100">Ne pare rău, browser-ul dvs. nu suportă elementul canvas</canvas> 
+    
+    
+    <!--
+        Elementul canvas nu oferă posibilitatea de a desena direct, desenarea
+        trebuie făcută cu ajutorul implementării unui script în limbajului JS.
+        
+        Funcția pentru desenarea textului fillText desenează forma textului
+        (textul în sine) cu culoarea specificat de atributul fillStyle.
+        
+        Funcția strokeText desenează doar conturul textului utilizând culoarea
+        specificată cu ajutorul atributului strokeStyle, primul parametru este
+        textul, iar al doilea și al treilea - coordonatele x și y.
+        
+        V-om aplica proprietățile ce permit lucrul cu umbrele (shadows). Astfel
+        shadowColor stabilește culoarea umbrei. shadowBlur stabilește cantitatea
+        de estompare a umbrei în pixeli. Cu cât mai mică este valoarea, cu atât
+        mai clare sunt umbrele. shadowOffsetX și shadowOffsetY stabilesc offset-ul
+        (poziția) umbrei.
+        
+        Apropo în HTML5 putem alege să specificăm sau nu atributul type în elementele
+        <script> deoarece acesta a devenit opțional. Poate ar fi de dorit din motive
+        de performanță sa evităm dar totuși pentru claritate am lăsat.
+    -->
+    <script type="text/javascript">
+        var c=document.getElementById("myCanvas");
+        var cxt=c.getContext("2d");
+        cxt.fillStyle="#17BF2D";
+        cxt.fillRect(10,15,150,75);
+        cxt.font = '40px arial';
+        cxt.fillStyle = '#0008FF';
+        cxt.fillText ('Stas', 10, 50);
+        cxt.shadowColor='#F018EC'; 
+        cxt.shadowBlur = 5; 
+        cxt.shadowOffsetX = 1; 
+        cxt.shadowOffsetY = 1;
+        cxt.strokeStyle ="Exemplu";
+        cxt.strokeText('Salut!', 10, 100);
+    </script>
+    
+    <!--
+        Sintaxa HTML5 este compatibilă cu HTML4 și XHTML. Putem închide
+        elementele ce au un singur tag cu slash <tag /> precum în XHTML
+        sau putem să le lăsam fără să le adăugăm slash <tag>. La fel, putem
+        folosi litere mici sau/și mari, pentru numele tag-urilor și atributelor
+        deoarece acestea nu sunt case sensitive și nu contează cum sunt scrise.
+        Realizăm testele asupra elementului <hr>, scriindu-l sub diferite forme:
+    -->
+    <hr> <!-- Minuscule -->
+    <HR> <!-- Majuscule -->
+    <hr /> <!-- Cu slash -->
+
+    <!--
+        Antet de nivelul 4 de antet (mai puțin important)
+    -->
+    <h4>Heading 4</h4>
+    
+    <!--
+        Testam marcajele de tip bloc (pereche) pentru formatarea textului:
+            <b> - text boldat
+            <i> - text înclinat (italic)
+            <u> - text subliniat
+            <em> - text accentuat
+            <strong> - text puternic accentuat
+            <cite> - text ce reprezintă o citare
+                     sau o referire la alte surse
+            <code> - desemnează un fragment de cod
+    -->
+    <p>
+        <b>Exemplu de text boldat (îngroșat)</b><br>
+        <i>Exemplu de text înclinat (italic)</i><br>
+        <u>Exemplu de text subliniat</u><br>
+        <em>Exemplu de text accentuat</em><br>
+        <strong>Exemplu de text puternic accentuat</strong><br>
+        <cite>Exemplu de text ce reprezintă o citare sau o referire la alte surse</cite><br>
+        <code>Exemplu de text ce desemnează un fragment de cod:<br>
+        if (x == 10) {
+            f(x);
+        }</code>
+    </p>
+    
+    <!--
+        Antet de nivelul 5 de antet (mai puțin important)
+    -->
+    <h5>Heading 5</h5>
+    
+    <!--
+        Limbajul HTML permite organizarea structurată a informației sub forma
+        de tabele bidimensionale(linii (rows) și coloane (columns)). Definim un
+        tabel cu ajutorul marcajului pentru introducerea de obiecte (tabele) <table>
+        ce v-a conține una sau mai mute linii definite prin tag-ul <tr>. Fiecare
+        linie conține una sau mai multe celule <td> sau celule header <th>,
+        diferențiate prin modul de afișare. Pentru a defini grosimea marginii
+        tabelului utilizăm atributul border (este obligatoriu). Am unit una sau
+        mai multe celule dintr-un tabel folosind atributule colspan (pentru unirea
+        pe orizontală) și rowspan (pentru unirea pe verticală).
+    -->
+    <p>Exemplu de tabel:</p><br>
+    <table border="1">
+        <tr>
+	    <!-- Cap de tabel sau celula-antet ("table header") - descrie conținutul coloanelor/rândurilor -->
+            <th>Celula 1</th>
+            <th>Celula 2</th>
+	    <!-- Celule de date ce formează rândurile și coloanele tabelului -->
+            <td rowspan="3">Celula 3</td>
+        </tr>
+        <tr>
+            <td colspan="2">Celule 4 și 5</td>
+        </tr>
+        <tr>
+            <!-- Atributul de aliniere a textului celulei la dreapta -->
+            <td align="right">Celula 6</td>
+            <td>Celula 7</td>
+        </tr>
+    </table>
+    
+    <!--
+        Definirea listelor neordonate cu marcajul pentru
+        crearea listelor <ul> cu elementele <li>
+    -->
+    <ul>
+        <li>Elementul 1 al listei</li>
+        <li>Elementul 2 al listei</li>
+        <li>etc.</li>
+    </ul>
+    
+    <!--
+        HTML5 prevede o modalitate standard de a include audio cu ajutorul elementului
+        <audio> ce poate reda fișiere de sunet sau un flux audio de formatele suportate
+        Ogg Vorbis, MP3 și Waw (depinde și de browser). Am setat atributele autoplay și
+        loop pentru ca audio să se porneasca singur și să înceapă din nou de fiecare dată
+        după ce se va termina. Ca atribut src putem indica atât unul local cât și extern
+        de exemplu un arranjament orchestral al "Marșului Toreador" din opera "Carmen"
+        (1875) al compozitorului francez Georges Bizet.
+
+    -->
+    <audio src="https://upload.wikimedia.org/wikipedia/commons/4/40/Toreador_song_cleaned.ogg" autoplay="autoplay" loop="loop" controls="controls">
+        Browser-ul dvs. nu suportă elementul audio.
+    </audio>
+    
+    <!--
+        Anumite caractere precum <, > au o semnificație specială în limbajul
+        HTML și pentru a putea utiliza aceste caractere într-o pagină utilizăm
+        entitățile:
+            &lt; - reprezintă <
+            &gt; - reprezintă >
+            &amp; - reprezintă &
+            &apos; - reprezintă '
+            &quot; - reprezintă "
+            &nbsp; - reprezintă un “spațiu alb”
+    -->
+    <p>Exemplu&nbsp;de&nbsp;utilizare&nbsp;a&nbsp;entităților &lt;, &gt;, &amp;, &apos; și &quot;</p>
+
+    <!--
+        Antet de nivelul 6 de antet (cel mai puțin important)
+    -->
+    <h6>Heading 6</h6>
+    
+    <!--
+        Definirea listelor ordonate cu marcajul pentru crearea listelor <ol>
+        cu elementele <li>, pentru care putem stabili modul de numerotare al
+        itemilor cu ajutorul atributului type, în cazul dat v-om genera o listă
+        numerotată cu A,B,C...
+    -->
+    
+    <ol type="A">
+        <li>Elementul 1 al listei</li>
+        <li>Elementul 2 al listei</li>
+        <li>etc.</li>
+    </ol>
+
+    <!-- Testăm aplicarea atributului class descris în cadrul stilului CSS -->
+    <p class="important">Text important!</p>
+    <p class="fineprint">Text pentru listare</p>
+
+    <!-- Testăm aplicarea tag-urilor div și span descrise în cadrul stilului CSS -->
+    <div>Acest div este tratat similar cu un paragraf, dar <span class="color">acest span</span> nu este tratat ca un paragraf.</div>
+    
+    <!--
+        Inseram un link (hyperlink) către o altă pagină prin marcajul <a>...</a>
+        pentru crearea hiperlegăturilor adică a unei legături (relații) conexiuni
+        între nodurile (componente a sistemului hipertext) din rețeaua hipertextului,
+        ce permit utilizatorului să treacă de la un nod (concept/bloc de informație)
+        la altul (specificat de atributul href). Textul asociat link-ului va fi automat
+        subliniat și colorat de regulă în albastru (se poate schimba).
+    -->
+    <p>Pentru a afla mai multe despre limbajul HTML accesați articolul Wikipedia de <a href="https://ro.wikipedia.org/wiki/HyperText_Markup_Language">aici</a></p>
+    
+    <!--
+        Putem însera un link către o anumită zona din pagina prin
+        inserarea unei ancore și adăugarea unui link spre ea (în
+        cazul dat am realizat întoarcerea la începutul paginii).
+        Acest lucru se poate de realizat și spre alte pagini.
+    -->
+    <a href="#ancora_inceput">Întoarcere spre începutul paginii</a>
+    
+    <!--
+        Pentru a demonstra vizitatorilor paginii că pentru noi corectitudinea codului
+        importă am plasat insigna obținută în urma trecerii CSS Validator
+    -->
+    <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="CSS corect!" />
+        </a>
+    </p>
+    
+</body>
+
+<!--
+    Elementul-rădăcină de bază </html> marchează sfârșitul codului limbajului de adnotare
+    HTML și încadrează secțiunile <head> și <body>. Toate celelalte elemente HTML trebuie
+    să fie incluse în interiorul acestui element (respectăm structura generală a unui
+    document HTML).
+-->
+</html>
